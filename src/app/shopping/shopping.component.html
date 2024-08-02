@@ -1,0 +1,46 @@
+<div class="shopping-container">
+    <h1>Product List</h1>
+    <button>Logout</button>
+    <div class="filters">
+      <label for="category">Category:</label>
+      <select id="category" (change)="onCategoryChange($event)">
+        <option value="All">All</option>
+        <option value="electronics">Electronics</option>
+        <option value="men's clothing">Men's Clothing</option>
+        <option value="women's clothing">Women's Clothing</option>
+        <option value="jewelery">Jewelery</option>
+        <!-- Agrega más categorías según sea necesario -->
+      </select>
+  
+      <label for="limit" >Limit:</label>
+      <select id="limit" (change)="onLimitChange($event)">
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+
+        <!-- Agrega más opciones de límite según sea necesario -->
+      </select>
+    </div>
+  
+    <table>
+      <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{ product.id }}</td>
+            <td>{{ product.title }}</td>
+            <td>{{ product.category }}</td>
+            <td>{{ product.price }}</td>
+            <td><button (click)="openModal()">Open</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
