@@ -1,0 +1,86 @@
+// Variables para colores y tamaños
+$primary-color: #39853c;
+$image-size: 150px;
+
+// Estilos generales del formulario de inicio de sesión
+.login-container{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 35%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+
+  h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+
+  span{
+    margin-top: 16px;
+  }
+  p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: gray;
+  }
+
+  // Contenedor de la imagen
+  .image-container {
+    margin: 20px;
+    display: flex;
+    justify-content: center; // Centra la imagen horizontalmente
+    align-items: center;
+
+    img {
+      width: 150px;
+      height: auto;
+      border-radius: 50%;
+      border: 1px solid gray;
+    }
+  }
+
+  // Estilos para el campo de entrada
+  input[type="email"],
+  input[type="password"] {
+    width: 350px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  // Estilo del botón de login
+  button {
+    width: 370px;
+    padding: 10px;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  // Estilos para el texto de credenciales
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}

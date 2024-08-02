@@ -1,6 +1,8 @@
-<div class="shopping-container">
-    <h1>Product List</h1>
-    <button>Logout</button>
+<div class="product-list">
+  <div class="nav-bar">
+    <h4>Product List</h4>
+    <button (click)="loggout()">Logout</button>
+  </div>  
     <div class="filters">
       <label for="category">Category:</label>
       <select id="category" (change)="onCategoryChange($event)">
@@ -39,7 +41,7 @@
             <td>{{ product.title }}</td>
             <td>{{ product.category }}</td>
             <td>{{ product.price }}</td>
-            <td><button (click)="openModal()">Open</button></td>
+            <td><button (click)="openModal(product)" class="btn-open">Open</button></td>
         </tr>
       </tbody>
     </table>

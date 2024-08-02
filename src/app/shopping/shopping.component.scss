@@ -1,0 +1,133 @@
+// Variables para colores y tamaños
+$primary-color: #4CAF50;
+$danger-color: #F44336;
+
+// Estilos generales de la lista de productos
+.nav-bar{
+    margin:20px 20px 0px 20px;
+    display: flex;
+}
+.nav-bar h4{
+    flex: 10;
+}
+.nav-bar button{
+    flex: 1;
+    background-color: $danger-color;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    &:hover {
+        background-color: darken($danger-color, 10%);
+    }
+}
+.product-list {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+
+  h4 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    align-items: flex-start;
+  }
+
+  // Estilos para el contenedor de filtros
+  .filters {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 20px 20px 20px;
+
+    .filter-item {
+      display: flex;
+      align-items: center;
+
+      label {
+        margin-right: px;
+        font-size: 14px;
+      }
+
+      select, input {
+        
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  // Estilos de la tabla
+  table {
+    margin: 20px 20px 20px 20px;
+    width: 100%;
+    max-width: 97%;
+    border: 1px solid #ccc;
+
+    thead {
+      
+
+      th {
+        padding: 10px;
+        text-align: left;
+        font-size: 14px;
+        border-bottom: 1px solid #ccc;
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+
+        &:hover {
+          background-color: #f1f1f1;
+        }
+
+        td {
+          padding: 10px;
+          font-size: 14px;
+          border-bottom: 1px solid #ddd;
+
+          &.actions {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  // Estilo del botón de logout
+  .logout {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: $danger-color;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($danger-color, 10%);
+    }
+  }
+
+  // Estilo del botón "open"
+  .btn-open {
+    padding: 5px 10px;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}

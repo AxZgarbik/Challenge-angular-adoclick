@@ -16,7 +16,11 @@ export class ApiService {
     if (category && category != '' && category != 'All') {
       url += `/category/${category}`;
     }
-    console.log('Fetching products from:', url);
+    return this.http.get(url);
+  }
+
+  getProductById(id?: number) {
+    let url = 'https://fakestoreapi.com/products/' + id;
     return this.http.get(url);
   }
 }

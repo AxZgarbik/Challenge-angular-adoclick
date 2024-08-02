@@ -1,1 +1,12 @@
-<p>modal-content works!</p>
+<div class="modal">
+    <div class="modal-header">
+      <p>{{ product.title }}</p>
+      <button class="close-modal" aria-label="Close modal" (click)="closeModal()" >&times;</button>
+    </div>
+    <div class="modal-content">
+      <img src="{{ product.image }}" alt="Product Image" class="product-image">
+      <p class="product-category"> {{ product.category }}</p>
+      <p class="product-description">{{ product.description }}</p>
+      <p class="product-price">Price: {{ product.price }}</p>
+    </div>
+</div>
